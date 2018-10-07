@@ -7,7 +7,8 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
-            title: 'Output Management'
+            title: 'Output Management',
+            template: 'src/index.html'
         })
     ],
     devtool: "inline-source-map",
@@ -20,6 +21,15 @@ module.exports = {
     },
     module: {
         rules:[
+            {
+                test: /\.(html)$/,
+                use: {
+                    loader: 'html-loader',
+                    options: {
+                        attrs: [':data-src']
+                    }
+                }
+            },
             {
                 test: /\.scss$/,
                 use:[

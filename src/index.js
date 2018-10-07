@@ -1,4 +1,7 @@
 import _ from 'lodash';
 import './scss/style.scss';
 
-console.log('hi');
+const name = 'soo';
+const a = `hi! ${name}`;
+
+console.log(a);

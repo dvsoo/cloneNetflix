@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "start": "webpack-dev-server --open",
-    "build": "webpack --config webpack.config.js",
+    "build": "webpack --mode development --config webpack.config.js",
     "babel": "nodemon src/index.js --exec babel-node"
   },
   "repository": {
@@ -23,6 +23,7 @@
     "@babel/core": "^7.1.2",
     "@babel/node": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
+    "@fortawesome/fontawesome-free": "^5.3.1",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^1.0.0",
     "csv-loader": "^3.0.2",

@@ -1,0 +1,17 @@
+.clearfix{
+  &:after{
+    content:'';
+    display: block;
+    clear: both;
+  }
+}
+
+.hidden{
+  widtH:1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  left:-9999%;
+  text-indent: -9999px;
+  line-height: 0;
+}

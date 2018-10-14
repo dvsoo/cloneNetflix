@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Nexflix - clone</title>
     <link href="/js/all.js">
+    <script defer src="https://use.fontawesome.com/releases/v5.4.1/js/all.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -34,19 +35,17 @@
             </ul> <!-- END gnb-->
         </nav> <!-- END gnbBox-->
         <div class="rightBox">
-            <button type="button" class="searchBtn"></button>
-            <button type="button" class="alertBtn"></button>
-            <button type="button" class="myPageBtn"></button>
+            <button type="button" class="searchBtn"><i class="fas fa-search"></i></button>
+            <button type="button" class="alertBtn"><i class="fas fa-bell"></i></button>
+            <button type="button" class="myPageBtn"><i class="fas fa-user"></i></button>
         </div> <!-- END rightBox-->
     </header> <!-- END header-->
     <div class="main">
         <section class="visual">
             <div class="videoBox">
-                <video class="video js-video" controls>
-                    <source src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4">
-                </video> <!-- END video-->
+                <video class="video js-video" src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4" controls></video> <!-- END video-->
                 <div class="videoBtn">
-                    <button type="button" class="muteBtn js-mute"></button>
+                    <button type="button" class="muteBtn js-mute"><i class="fas fa-volume-up"></i></button>
                     <input type="range" list="volumes"/>
                     <datalist id="volumes">
                         <option value="0" label="0%">

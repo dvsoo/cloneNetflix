@@ -22,7 +22,7 @@
 
   .gnbbox{
     position: absolute;
-    right:6rem;
+    right:8rem;
     .gnb{
       li{
         float:left;
@@ -43,6 +43,17 @@
   .rightBox{
     position: absolute;
     right:0;
+    top:25px;
+    button{
+      border:0;
+      background-color: transparent;
+      padding-left:10px;
+      padding-right:10px;
+      svg{
+        color:#fff;
+        font-size: 20px;
+      }
+    }
   }
 }
 
@@ -55,6 +66,22 @@
 .videoBox,
 .video{
   width: 100%;
+}
+
+.videoBtn{
+  text-align: right;
+  margin-top:10px;
+  margin-right:10px;
+  margin-bottom:50px;
+  .muteBtn{
+    border:0;
+    background-color:transparent;
+    outline: none;
+    cursor: pointer;
+    svg{
+      font-size:20px;
+    }
+  }
 }
 
 

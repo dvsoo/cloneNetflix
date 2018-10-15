@@ -72,3 +72,65 @@ jsMuteBtn.addEventListener('click', handleVideoMute);
 videoVolume.addEventListener('change', handleVideoVolume);
 playBtn.addEventListener('click', handleVideoPlay);
 
+
+
+
+///// slide
+
+const slide = document.querySelectorAll('.js-slide'),
+    slideBox = document.querySelector('.slideBox'),
+    slideLength = slide.length;
+
+
+let i = 0;
+
+
+const handlePrevBtn = () => {
+    if(i < -1){
+        return false;
+    }else if(i === 0){
+        slide[i].classList.remove('active');
+        i = 2;
+        slide[i].classList.add('active');
+    }else{
+        slide[i].classList.remove('active');
+        i--;
+        slide[i].classList.add('active');
+    }
+};
+
+
+const handleNextBtn = () => {
+    if(i > slideLength - 1){
+        return false;
+    }else if(i === slideLength - 1){
+        slide[i].classList.remove('active');
+        i = 0;
+        slide[i].classList.add('active');
+    }else{
+        slide[i].classList.remove('active');
+        i++;
+        slide[i].classList.add('active');
+    }
+};
+
+const initSlide = () => {
+    const prevBtn = document.createElement('button'),
+        nextBtn = document.createElement('button');
+
+    prevBtn.innerHTML = `<i class="fas fa-caret-left"></i>`;
+    nextBtn.innerHTML = `<i class="fas fa-caret-right"></i>`;
+
+    prevBtn.classList.add('prevBrn');
+    nextBtn.classList.add('nextBtn');
+
+    slideBox.appendChild(prevBtn);
+    slideBox.appendChild(nextBtn);
+
+    slide[i].classList.add('active');
+    prevBtn.addEventListener('click', handlePrevBtn);
+    nextBtn.addEventListener('click', handleNextBtn);
+    //addEvent(event);
+};
+
+initSlide();
